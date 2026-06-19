@@ -1,4 +1,4 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://studynavi.co.kr/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://studynavi.co.kr/sitemap.xml

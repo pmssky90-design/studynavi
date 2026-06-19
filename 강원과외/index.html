@@ -1,356 +1,387 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강원과외</title>
-    <meta name="description" content="강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.">
-    <link rel="canonical" href="https://studynavi.co.kr/강원과외/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="전국과외">
-    <meta property="og:title" content="강원과외">
-    <meta property="og:description" content="강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.">
-    <meta property="og:url" content="https://studynavi.co.kr/강원과외/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="강원과외">
-    <meta name="twitter:description" content="강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.">
-    <meta property="og:image" content="https://studynavi.co.kr/images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2007_46_15.png">
-    <meta name="twitter:image" content="https://studynavi.co.kr/images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2007_46_15.png">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://studynavi.co.kr/#website","url":"https://studynavi.co.kr/","name":"전국과외","inLanguage":"ko-KR"},{"@type":"WebPage","@id":"https://studynavi.co.kr/강원과외/#webpage","url":"https://studynavi.co.kr/강원과외/","name":"강원과외","description":"강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.","inLanguage":"ko-KR","isPartOf":{"@id":"https://studynavi.co.kr/#website"},"breadcrumb":{"@id":"https://studynavi.co.kr/강원과외/#breadcrumb"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://studynavi.co.kr/images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2007_46_15.png"}},{"@type":"BreadcrumbList","@id":"https://studynavi.co.kr/강원과외/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"전국과외","item":"https://studynavi.co.kr/"},{"@type":"ListItem","position":2,"name":"강원과외","item":"https://studynavi.co.kr/강원과외/"}]}]}</script>
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(180deg, #f3efe6 0%, #f8f5ef 100%);
-            color: #152033;
-        }
-        .page {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 24px;
-            background: linear-gradient(180deg, #ffffff 0%, #fffaf0 100%);
-            min-height: 100vh;
-            border-left: 1px solid #eadcc3;
-            border-right: 1px solid #eadcc3;
-        }
-        header { margin-bottom: 28px; }
-        h1 { margin: 0 0 12px; color: #061b36; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.08; }
-        .lead { margin: 0; line-height: 1.8; color: #444; font-size: 1.03rem; }
-        .breadcrumb { font-size: 0.95rem; margin-bottom: 20px; }
-        .breadcrumb a { color: #0b66c2; text-decoration: none; }
-        .breadcrumb span { color: #666; }
-        nav, .children, .siblings {
-            margin-top: 22px;
-            padding: 22px;
-            border: 1px solid #e1d3ba;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.94);
-            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
-        }
-        nav h2, .children h2, .siblings h2 { margin: 0 0 12px; color: #061b36; font-size: 1.25rem; }
-        ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding-left: 0; margin: 16px 0 0; }
-        li { margin: 0; }
-        a { color: #0b66c2; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        nav li a, .children li a, .siblings li a, .article-body li a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 40px;
-            padding: 9px 15px;
-            border: 1px solid #c9b58d;
-            border-radius: 6px;
-            background: #fffdf8;
-            color: #073463;
-            text-decoration: none;
-            font-weight: 800;
-            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
-            white-space: nowrap;
-        }
-        nav li a:hover, .children li a:hover, .siblings li a:hover, .article-body li a:hover {
-            background: #08234a;
-            border-color: #08234a;
-            color: #f8d996;
-            transform: translateY(-1px);
-            box-shadow: 0 8px 18px rgba(8, 35, 74, 0.18);
-            text-decoration: none;
-        }
-        .box {
-            border: 1px solid #e4d6bd;
-            padding: 18px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
-            box-shadow: 0 12px 30px rgba(47, 37, 20, 0.06);
-        }
-        .box p { margin: 0; color: #3d4655; line-height: 1.75; }
-        .post-content { margin: 26px 0 30px; }
-        .thumbnail-image { display: none; }
-        .fixed-images { margin: 0; padding: 0; line-height: 0; }
-        .fixed-images img { display: block; width: 100%; height: auto; margin: 0; padding: 0; border: 0; }
-        .article-body { margin-top: 26px; line-height: 1.85; color: #273241; }
-        .article-body h2 {
-            margin: 30px 0 12px;
-            padding: 16px 18px;
-            color: #061b36;
-            font-size: 1.45rem;
-            line-height: 1.35;
-            border: 1px solid #e1d3ba;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
-            box-shadow: 0 10px 24px rgba(47, 37, 20, 0.06);
-        }
-        .article-body h3 {
-            margin: 18px 0 10px;
-            padding: 14px 16px;
-            color: #10243f;
-            font-size: 1.08rem;
-            line-height: 1.45;
-            border-left: 4px solid #c79a45;
-            border-radius: 8px;
-            background: #fffdf8;
-        }
-        .article-body p {
-            margin: 0 0 14px;
-            padding: 16px 18px;
-            border: 1px solid #eadfcd;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.92);
-            box-shadow: 0 8px 20px rgba(47, 37, 20, 0.04);
-        }
-        .article-body ul {
-            display: grid;
-            gap: 10px;
-            list-style: none;
-            padding-left: 0;
-            margin: 16px 0 18px;
-        }
-        .article-body li {
-            margin: 0;
-            padding: 12px 14px;
-            border: 1px solid #e7dcc8;
-            border-radius: 8px;
-            background: #fffdf8;
-        }
-        footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid #eee; color: #777; font-size: 0.95rem; }
-        @media (max-width: 760px) {
-            .page { padding: 18px 14px; }
-            nav, .children, .siblings { padding: 20px 16px; }
-            nav li a, .children li a, .siblings li a, .article-body li a { padding: 9px 13px; font-size: 0.95rem; }
-            .article-body { margin-top: 20px; line-height: 1.78; }
-            .article-body h2 { margin-top: 22px; padding: 14px 15px; font-size: 1.26rem; }
-            .article-body h3 { padding: 12px 14px; font-size: 1.02rem; }
-            .article-body p { padding: 14px 15px; }
-            .article-body li { padding: 11px 12px; }
-        }
-    </style>
-</head>
-<body>
-<div class="page">
-    <header>
-        <div class="breadcrumb"><span>강원과외</span></div>
-        <h1>강원과외</h1>
-    </header>
-
-    <div class="box">
-        <p>강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.</p>
-    </div>
-
-    
-    <style>
-        .page {
-            max-width: 1100px;
-            background: linear-gradient(180deg, #ffffff 0%, #fffaf0 100%);
-            border-left: 1px solid #eadcc3;
-            border-right: 1px solid #eadcc3;
-        }
-        header h1 {
-            color: #061b36;
-            font-size: clamp(2.2rem, 5vw, 4rem);
-            line-height: 1.08;
-        }
-        .box {
-            border-color: #e4d6bd;
-            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
-            box-shadow: 0 12px 30px rgba(47, 37, 20, 0.06);
-        }
-        .province-sample {
-            margin: 26px 0 30px;
-        }
-        .province-hero, .province-section {
-            margin-top: 18px;
-            padding: 24px;
-            border: 1px solid #e1d3ba;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.94);
-            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
-        }
-        .province-hero {
-            margin-top: 0;
-            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
-        }
-        .province-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            min-height: 34px;
-            margin: 0 0 14px;
-            padding: 7px 13px;
-            border-radius: 999px;
-            background: #08234a;
-            color: #f6d58b;
-            font-size: 0.92rem;
-            font-weight: 800;
-        }
-        .province-sample h2 {
-            margin: 0 0 14px;
-            color: #061b36;
-            font-size: 1.45rem;
-        }
-        .province-sample h3 {
-            margin: 18px 0 8px;
-            color: #061b36;
-            font-size: 1.12rem;
-        }
-        .province-sample p {
-            margin: 0 0 16px;
-            color: #3d4655;
-            line-height: 1.85;
-        }
-        .province-sample ul, .children ul, .siblings ul, .sample-link-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 16px 0 18px;
-            padding: 0;
-            list-style: none;
-        }
-        .province-sample li, .children li, .siblings li {
-            margin: 0;
-        }
-        .province-link-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 16px;
-        }
-        .province-link-row a, .province-sample li a, .children li a, .siblings li a, .sample-nav-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 40px;
-            padding: 9px 15px;
-            border: 1px solid #c9b58d;
-            border-radius: 6px;
-            background: #fffdf8;
-            color: #073463;
-            text-decoration: none;
-            font-weight: 800;
-            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
-            white-space: nowrap;
-        }
-        .province-link-row a:hover, .province-sample li a:hover, .children li a:hover, .siblings li a:hover, .sample-nav-link:hover {
-            background: #08234a;
-            border-color: #08234a;
-            color: #f8d996;
-            transform: translateY(-1px);
-            box-shadow: 0 8px 18px rgba(8, 35, 74, 0.18);
-            text-decoration: none;
-        }
-        nav, .children, .siblings {
-            margin-top: 22px;
-            padding: 22px;
-            border: 1px solid #e1d3ba;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.94);
-            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
-        }
-        nav h2, .children h2, .siblings h2 {
-            color: #061b36;
-            font-size: 1.25rem;
-        }
-        @media (max-width: 760px) {
-            .page { padding: 18px 14px; }
-            .province-hero, .province-section, nav, .children, .siblings { padding: 20px 16px; }
-            .province-link-row a, .province-sample li a, .children li a, .siblings li a, .sample-nav-link {
-                padding: 9px 13px;
-                font-size: 0.95rem;
-            }
-        }
-    </style>
-    <section class="province-sample">
-        <div class="fixed-images"><img src="../images/thumbs/fixed/001.png" alt="강원과외 맞춤 과외 안내 이미지 001" loading="lazy"><img src="../images/thumbs/fixed/002.png" alt="강원과외 맞춤 과외 안내 이미지 002" loading="lazy"><img src="../images/thumbs/fixed/003.png" alt="강원과외 맞춤 과외 안내 이미지 003" loading="lazy"><img src="../images/thumbs/fixed/004.png" alt="강원과외 맞춤 과외 안내 이미지 004" loading="lazy"><img src="../images/thumbs/fixed/005.png" alt="강원과외 맞춤 과외 안내 이미지 005" loading="lazy"><img src="../images/thumbs/fixed/006.png" alt="강원과외 맞춤 과외 안내 이미지 006" loading="lazy"></div>
-        <div class="province-hero">
-            <p class="province-eyebrow">강원 지역 과외 안내</p>
-            <h2>강원 주요 시군구 과외 정보를 생활권 기준으로 확인하세요</h2>
-            <p>강원과외는 특정 광고 이미지보다 지역별 학습 정보와 내부 이동 구조를 우선으로 구성한 시도급 안내 페이지입니다. 세부 지역의 학습 환경과 학교 시험 대비 흐름을 확인하고, 필요한 경우 과목별·학년별 페이지로 이동할 수 있습니다.</p>
-            <div class="province-link-row"><a class="sample-nav-link" href="강원초등과외/index.html">강원초등과외</a><a class="sample-nav-link" href="강원중등과외/index.html">강원중등과외</a><a class="sample-nav-link" href="강원고등과외/index.html">강원고등과외</a><a class="sample-nav-link" href="강원영어과외/index.html">강원영어과외</a><a class="sample-nav-link" href="강원수학과외/index.html">강원수학과외</a></div>
-        </div>
-
-        <div class="province-section">
-            
-        <h2>학습환경 특징</h2>
-        <p>강원과외는 지역 안에서도 생활권, 학교 분위기, 학습 목표가 다르다는 점을 먼저 고려해야 합니다. 같은 강원 안에서도 학교별 시험 난도, 학원가 접근성, 학생의 이동 동선, 내신과 수능 준비 방식이 달라지기 때문에 먼저 세부 지역 페이지를 확인하는 흐름이 좋습니다.</p>
-        <p>강원 지역은 학생마다 필요한 수업 방식이 다를 수 있습니다. 내신 대비가 급한 학생, 수능 장기 관리가 필요한 학생, 기초 개념부터 다시 잡아야 하는 학생은 서로 다른 학습 설계가 필요합니다.</p>
-
-        <h2>주요 학교 정보</h2>
-        <p>강원에는 지역별로 학업 분위기와 시험 방식이 다른 중학교와 고등학교가 분포해 있습니다. 학교별 내신 경쟁, 수행평가 방식, 부교재 활용, 서술형 비중이 다르기 때문에 학생이 다니는 학교와 생활권을 함께 확인하는 것이 좋습니다.</p>
-        <p>고등학교 과외는 학교별 시험 범위, 부교재, 수행평가, 모의고사 흐름을 함께 봐야 하고, 중학교 과외는 선행보다 개념 이해와 공부 습관, 시험 전 정리 루틴을 안정적으로 만드는 것이 중요합니다.</p>
-
-        <h2>과목별 학습 전략</h2>
-        <p><a href="강원영어과외/index.html">강원영어과외</a>는 독해, 문법, 어휘, 서술형 대비를 학생 수준에 맞게 나누어 접근하는 것이 좋습니다. 중학생은 학교 시험의 본문 암기와 문법 적용을 함께 관리해야 하고, 고등학생은 내신 지문 분석과 모의고사 독해 속도를 동시에 끌어올려야 합니다.</p>
-        <p><a href="강원수학과외/index.html">강원수학과외</a>는 개념 이해, 유형 반복, 오답 분석 순서가 중요합니다. 수학 내신은 학교별 변형 문제가 많기 때문에 교과서, 부교재, 프린트, 기출 흐름을 함께 보는 수업이 필요합니다.</p>
-
-        <h2>학년별 학습 방향</h2>
-        <p><a href="강원초등과외/index.html">강원초등과외</a>는 공부 습관과 기초 개념을 만드는 시기입니다. <a href="강원중등과외/index.html">강원중등과외</a>는 내신 시험의 형식을 익히는 시기이며, <a href="강원고등과외/index.html">강원고등과외</a>는 내신과 수능을 함께 설계해야 하는 단계입니다.</p>
-    
-        </div>
-
-        <div class="province-section">
-            <h2>중학생 학습 전략</h2>
-            <p>강원 중학생은 학교별 내신 범위와 수행평가, 서술형 출제 비중을 함께 봐야 합니다. 영어는 본문 암기와 문법 적용을 분리해서 관리하고, 수학은 단원별 개념과 대표 유형을 먼저 안정화한 뒤 오답을 반복 추적하는 방식이 좋습니다.</p>
-            <p>중학교 시기에는 시험 직전 벼락치기보다 평소 복습 루틴이 중요합니다. 각 구 페이지에서 학교와 생활권을 좁힌 뒤 학생의 현재 수준에 맞는 과목별 페이지로 이동하면 더 구체적인 학습 방향을 잡기 쉽습니다.</p>
-        </div>
-
-        <div class="province-section">
-            <h2>고등학생 학습 전략</h2>
-            <p>강원 고등학생은 내신, 모의고사, 수능, 수행평가를 분리해서 관리해야 합니다. 학교별 시험 난도와 부교재 활용 방식이 다르기 때문에 단순 문제 풀이보다 시험 범위 분석, 서술형 감점 포인트, 모의고사 약점 보완이 함께 필요합니다.</p>
-            <p>상위권 학생은 실수와 시간 관리가 중요하고, 중위권 학생은 개념과 유형 연결이 중요합니다. 기초가 약한 학생은 선행보다 현재 단원의 필수 개념과 이전 학년의 빈틈을 함께 보완해야 학습 효과가 오래 유지됩니다.</p>
-        </div>
-
-        <div class="province-section">
-            <h2>강원 주요 시군구 과외</h2>
-            <p>아래 카드를 선택하면 강원 세부 지역 과외 페이지로 이동합니다. 지역 페이지에서 다시 동별, 과목별, 학년별, 학교별 페이지로 좁혀볼 수 있습니다.</p>
-            <div class="sample-link-row"><a class="sample-nav-link" href="강릉시과외/index.html">강릉시과외</a><a class="sample-nav-link" href="동해시과외/index.html">동해시과외</a><a class="sample-nav-link" href="삼척시과외/index.html">삼척시과외</a><a class="sample-nav-link" href="속초시과외/index.html">속초시과외</a><a class="sample-nav-link" href="양구군과외/index.html">양구군과외</a><a class="sample-nav-link" href="영월군과외/index.html">영월군과외</a><a class="sample-nav-link" href="원주시과외/index.html">원주시과외</a><a class="sample-nav-link" href="정선군과외/index.html">정선군과외</a><a class="sample-nav-link" href="춘천시과외/index.html">춘천시과외</a><a class="sample-nav-link" href="태백시과외/index.html">태백시과외</a><a class="sample-nav-link" href="평창군과외/index.html">평창군과외</a><a class="sample-nav-link" href="화천군과외/index.html">화천군과외</a><a class="sample-nav-link" href="횡성군과외/index.html">횡성군과외</a></div>
-        </div>
-
-        <div class="province-section">
-            <h2>FAQ</h2>
-            <h3>강원과외는 어느 지역부터 확인하는 것이 좋나요?</h3>
-            <p>학생이 거주하거나 학교를 다니는 세부 지역 페이지를 먼저 확인하는 것이 좋습니다. 이후 동, 과목, 학년, 학교 기준으로 좁히면 필요한 정보를 빠르게 찾을 수 있습니다.</p>
-            <h3>강원영어과외와 강원수학과외는 어디에서 볼 수 있나요?</h3>
-            <p>상단 주요 링크에서 강원영어과외와 강원수학과외로 바로 이동할 수 있습니다. 과목이 정해져 있다면 과목 페이지를 먼저 확인하는 흐름도 좋습니다.</p>
-            <h3>중학생과 고등학생은 과외 기준이 다른가요?</h3>
-            <p>다릅니다. 중학생은 내신 적응과 기초 정리가 중요하고, 고등학생은 학교별 내신과 모의고사, 수능형 학습을 함께 관리해야 합니다.</p>
-            <h3>강원 주요 시군구 과외 페이지는 어떤 역할인가요?</h3>
-            <p>세부 지역 페이지는 생활권 기준의 출발점입니다. 지역 페이지에서 동, 학교, 과목, 학년 페이지로 이어지도록 구성되어 있습니다.</p>
-            <h3>세부 지역 정보는 어디서 확인할 수 있나요?</h3>
-            <p>강원 세부 지역 정보는 이 페이지의 강원 주요 시군구 과외 영역에서 확인할 수 있습니다. 먼저 시군구 또는 주요 지역 페이지로 이동한 뒤, 동별·과목별·학년별·학교별 페이지로 좁혀보면 필요한 정보를 더 빠르게 찾을 수 있습니다.</p>
-        </div>
-    </section>
-
-    
-
-    
-
-    <section class="siblings">
-        <h2>함께 보는 과외</h2>
-        <ul><li><a href="강원영어과외/index.html">강원영어과외</a></li><li><a href="강원수학과외/index.html">강원수학과외</a></li><li><a href="강원초등과외/index.html">강원초등과외</a></li><li><a href="강원중등과외/index.html">강원중등과외</a></li><li><a href="강원고등과외/index.html">강원고등과외</a></li><li><a href="../고등학교과외/index.html">강원고등학교과외</a></li><li><a href="../중학교과외/index.html">강원중학교과외</a></li></ul>
-    </section>
-
-    <footer>
-        <p>생성된 정적 페이지입니다.</p>
-    </footer>
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="naver-site-verification" content="2cbbde17b132ae698d41f253cb83ff227643c208">
+    <title>강원과외</title>
+    <meta name="description" content="강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.">
+    <link rel="canonical" href="https://studynavi.co.kr/강원과외/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="전국과외">
+    <meta property="og:title" content="강원과외">
+    <meta property="og:description" content="강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.">
+    <meta property="og:url" content="https://studynavi.co.kr/강원과외/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강원과외">
+    <meta name="twitter:description" content="강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.">
+    <meta property="og:image" content="https://studynavi.co.kr/images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2007_46_15.png">
+    <meta name="twitter:image" content="https://studynavi.co.kr/images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2007_46_15.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://studynavi.co.kr/#website","url":"https://studynavi.co.kr/","name":"전국과외","inLanguage":"ko-KR"},{"@type":"WebPage","@id":"https://studynavi.co.kr/강원과외/#webpage","url":"https://studynavi.co.kr/강원과외/","name":"강원과외","description":"강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.","inLanguage":"ko-KR","isPartOf":{"@id":"https://studynavi.co.kr/#website"},"breadcrumb":{"@id":"https://studynavi.co.kr/강원과외/#breadcrumb"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://studynavi.co.kr/images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2007_46_15.png"}},{"@type":"BreadcrumbList","@id":"https://studynavi.co.kr/강원과외/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"전국과외","item":"https://studynavi.co.kr/"},{"@type":"ListItem","position":2,"name":"강원과외","item":"https://studynavi.co.kr/강원과외/"}]}]}</script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #f3efe6 0%, #f8f5ef 100%);
+            color: #152033;
+        }
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px;
+            background: linear-gradient(180deg, #ffffff 0%, #fffaf0 100%);
+            min-height: 100vh;
+            border-left: 1px solid #eadcc3;
+            border-right: 1px solid #eadcc3;
+        }
+        header { margin-bottom: 28px; }
+        h1 { margin: 0 0 12px; color: #061b36; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.08; }
+        .lead { margin: 0; line-height: 1.8; color: #444; font-size: 1.03rem; }
+        .breadcrumb { font-size: 0.95rem; margin-bottom: 20px; }
+        .breadcrumb a { color: #0b66c2; text-decoration: none; }
+        .breadcrumb span { color: #666; }
+        nav, .children, .siblings {
+            margin-top: 22px;
+            padding: 22px;
+            border: 1px solid #e1d3ba;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
+        }
+        nav h2, .children h2, .siblings h2 { margin: 0 0 12px; color: #061b36; font-size: 1.25rem; }
+        ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding-left: 0; margin: 16px 0 0; }
+        li { margin: 0; }
+        a { color: #0b66c2; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        nav li a, .children li a, .siblings li a, .article-body li a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            padding: 9px 15px;
+            border: 1px solid #c9b58d;
+            border-radius: 6px;
+            background: #fffdf8;
+            color: #073463;
+            text-decoration: none;
+            font-weight: 800;
+            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+            white-space: nowrap;
+        }
+        nav li a:hover, .children li a:hover, .siblings li a:hover, .article-body li a:hover {
+            background: #08234a;
+            border-color: #08234a;
+            color: #f8d996;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(8, 35, 74, 0.18);
+            text-decoration: none;
+        }
+        .box {
+            border: 1px solid #e4d6bd;
+            padding: 18px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
+            box-shadow: 0 12px 30px rgba(47, 37, 20, 0.06);
+        }
+        .box p { margin: 0; color: #3d4655; line-height: 1.75; }
+        .post-content { margin: 26px 0 30px; }
+        .thumbnail-image { display: none; }
+        .fixed-images { margin: 0; padding: 0; line-height: 0; }
+        .fixed-images img { display: block; width: 100%; height: auto; margin: 0; padding: 0; border: 0; }
+        .article-body { margin-top: 26px; line-height: 1.85; color: #273241; }
+        .article-body h2 {
+            margin: 30px 0 12px;
+            padding: 16px 18px;
+            color: #061b36;
+            font-size: 1.45rem;
+            line-height: 1.35;
+            border: 1px solid #e1d3ba;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
+            box-shadow: 0 10px 24px rgba(47, 37, 20, 0.06);
+        }
+        .article-body h3 {
+            margin: 18px 0 10px;
+            padding: 14px 16px;
+            color: #10243f;
+            font-size: 1.08rem;
+            line-height: 1.45;
+            border-left: 4px solid #c79a45;
+            border-radius: 8px;
+            background: #fffdf8;
+        }
+        .article-body p {
+            margin: 0 0 14px;
+            padding: 16px 18px;
+            border: 1px solid #eadfcd;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 8px 20px rgba(47, 37, 20, 0.04);
+        }
+        .article-body ul {
+            display: grid;
+            gap: 10px;
+            list-style: none;
+            padding-left: 0;
+            margin: 16px 0 18px;
+        }
+        .article-body li {
+            margin: 0;
+            padding: 12px 14px;
+            border: 1px solid #e7dcc8;
+            border-radius: 8px;
+            background: #fffdf8;
+        }
+        footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid #eee; color: #777; font-size: 0.95rem; }
+        @media (max-width: 768px) {
+            .page {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+                margin-bottom: 16px;
+            }
+            h2 {
+                font-size: 1.4rem;
+                line-height: 1.3;
+                margin-bottom: 12px;
+            }
+            h3 {
+                font-size: 1.15rem;
+                line-height: 1.35;
+            }
+            p,
+            li {
+                font-size: 0.95rem;
+                line-height: 1.65;
+            }
+            .hero-badge,
+            .section-badge {
+                font-size: 0.9rem;
+            }
+            nav, .children, .siblings { padding: 20px 16px; }
+            nav li a, .children li a, .siblings li a, .article-body li a { padding: 9px 13px; font-size: 0.95rem; }
+            .article-body { margin-top: 20px; line-height: 1.78; }
+            .article-body h2 { margin-top: 22px; padding: 14px 15px; font-size: 1.4rem; line-height: 1.3; margin-bottom: 12px; }
+            .article-body h3 { padding: 12px 14px; font-size: 1.15rem; line-height: 1.35; }
+            .article-body p { padding: 14px 15px; }
+            .article-body li { padding: 11px 12px; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <div class="breadcrumb"><span>강원과외</span></div>
+        <h1>강원과외</h1>
+    </header>
+
+    <div class="box">
+        <p>강원과외 페이지입니다. 전국과외에 속한 정보를 제공합니다.</p>
+    </div>
+
+    
+    <style>
+        .page {
+            max-width: 1100px;
+            background: linear-gradient(180deg, #ffffff 0%, #fffaf0 100%);
+            border-left: 1px solid #eadcc3;
+            border-right: 1px solid #eadcc3;
+        }
+        header h1 {
+            color: #061b36;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.08;
+        }
+        .box {
+            border-color: #e4d6bd;
+            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
+            box-shadow: 0 12px 30px rgba(47, 37, 20, 0.06);
+        }
+        .province-sample {
+            margin: 26px 0 30px;
+        }
+        .province-hero, .province-section {
+            margin-top: 18px;
+            padding: 24px;
+            border: 1px solid #e1d3ba;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
+        }
+        .province-hero {
+            margin-top: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
+        }
+        .province-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            margin: 0 0 14px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: #08234a;
+            color: #f6d58b;
+            font-size: 0.92rem;
+            font-weight: 800;
+        }
+        .province-sample h2 {
+            margin: 0 0 14px;
+            color: #061b36;
+            font-size: 1.45rem;
+        }
+        .province-sample h3 {
+            margin: 18px 0 8px;
+            color: #061b36;
+            font-size: 1.12rem;
+        }
+        .province-sample p {
+            margin: 0 0 16px;
+            color: #3d4655;
+            line-height: 1.85;
+        }
+        .province-sample ul, .children ul, .siblings ul, .sample-link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0 18px;
+            padding: 0;
+            list-style: none;
+        }
+        .province-sample li, .children li, .siblings li {
+            margin: 0;
+        }
+        .province-link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .province-link-row a, .province-sample li a, .children li a, .siblings li a, .sample-nav-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            padding: 9px 15px;
+            border: 1px solid #c9b58d;
+            border-radius: 6px;
+            background: #fffdf8;
+            color: #073463;
+            text-decoration: none;
+            font-weight: 800;
+            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+            white-space: nowrap;
+        }
+        .province-link-row a:hover, .province-sample li a:hover, .children li a:hover, .siblings li a:hover, .sample-nav-link:hover {
+            background: #08234a;
+            border-color: #08234a;
+            color: #f8d996;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(8, 35, 74, 0.18);
+            text-decoration: none;
+        }
+        nav, .children, .siblings {
+            margin-top: 22px;
+            padding: 22px;
+            border: 1px solid #e1d3ba;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
+        }
+        nav h2, .children h2, .siblings h2 {
+            color: #061b36;
+            font-size: 1.25rem;
+        }
+        @media (max-width: 768px) {
+            .page { padding-left: 16px; padding-right: 16px; }
+            .province-sample h2 { font-size: 1.4rem; line-height: 1.3; margin-bottom: 12px; }
+            .province-sample h3 { font-size: 1.15rem; line-height: 1.35; }
+            .province-sample p, .province-sample li { font-size: 0.95rem; line-height: 1.65; }
+            .province-eyebrow { font-size: 0.9rem; }
+            .province-hero, .province-section, nav, .children, .siblings { padding: 20px 16px; }
+            .province-link-row a, .province-sample li a, .children li a, .siblings li a, .sample-nav-link {
+                padding: 9px 13px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+    <section class="province-sample">
+        <div class="fixed-images"><img src="../images/thumbs/fixed/001.png" alt="강원과외 맞춤 과외 안내 이미지 001" loading="lazy"><img src="../images/thumbs/fixed/002.png" alt="강원과외 맞춤 과외 안내 이미지 002" loading="lazy"><img src="../images/thumbs/fixed/003.png" alt="강원과외 맞춤 과외 안내 이미지 003" loading="lazy"><img src="../images/thumbs/fixed/004.png" alt="강원과외 맞춤 과외 안내 이미지 004" loading="lazy"><img src="../images/thumbs/fixed/005.png" alt="강원과외 맞춤 과외 안내 이미지 005" loading="lazy"><img src="../images/thumbs/fixed/006.png" alt="강원과외 맞춤 과외 안내 이미지 006" loading="lazy"></div>
+        <div class="province-hero">
+            <p class="province-eyebrow">강원 지역 과외 안내</p>
+            <h2>강원 주요 시군구 과외 정보를 생활권 기준으로 확인하세요</h2>
+            <p>강원과외는 특정 광고 이미지보다 지역별 학습 정보와 내부 이동 구조를 우선으로 구성한 시도급 안내 페이지입니다. 세부 지역의 학습 환경과 학교 시험 대비 흐름을 확인하고, 필요한 경우 과목별·학년별 페이지로 이동할 수 있습니다.</p>
+            <div class="province-link-row"><a class="sample-nav-link" href="강원초등과외/index.html">강원초등과외</a><a class="sample-nav-link" href="강원중등과외/index.html">강원중등과외</a><a class="sample-nav-link" href="강원고등과외/index.html">강원고등과외</a><a class="sample-nav-link" href="강원영어과외/index.html">강원영어과외</a><a class="sample-nav-link" href="강원수학과외/index.html">강원수학과외</a></div>
+        </div>
+
+        <div class="province-section">
+            
+        <h2>학습환경 특징</h2>
+        <p>강원과외는 지역 안에서도 생활권, 학교 분위기, 학습 목표가 다르다는 점을 먼저 고려해야 합니다. 같은 강원 안에서도 학교별 시험 난도, 학원가 접근성, 학생의 이동 동선, 내신과 수능 준비 방식이 달라지기 때문에 먼저 세부 지역 페이지를 확인하는 흐름이 좋습니다.</p>
+        <p>강원 지역은 학생마다 필요한 수업 방식이 다를 수 있습니다. 내신 대비가 급한 학생, 수능 장기 관리가 필요한 학생, 기초 개념부터 다시 잡아야 하는 학생은 서로 다른 학습 설계가 필요합니다.</p>
+
+        <h2>주요 학교 정보</h2>
+        <p>강원에는 지역별로 학업 분위기와 시험 방식이 다른 중학교와 고등학교가 분포해 있습니다. 학교별 내신 경쟁, 수행평가 방식, 부교재 활용, 서술형 비중이 다르기 때문에 학생이 다니는 학교와 생활권을 함께 확인하는 것이 좋습니다.</p>
+        <p>고등학교 과외는 학교별 시험 범위, 부교재, 수행평가, 모의고사 흐름을 함께 봐야 하고, 중학교 과외는 선행보다 개념 이해와 공부 습관, 시험 전 정리 루틴을 안정적으로 만드는 것이 중요합니다.</p>
+
+        <h2>과목별 학습 전략</h2>
+        <p><a href="강원영어과외/index.html">강원영어과외</a>는 독해, 문법, 어휘, 서술형 대비를 학생 수준에 맞게 나누어 접근하는 것이 좋습니다. 중학생은 학교 시험의 본문 암기와 문법 적용을 함께 관리해야 하고, 고등학생은 내신 지문 분석과 모의고사 독해 속도를 동시에 끌어올려야 합니다.</p>
+        <p><a href="강원수학과외/index.html">강원수학과외</a>는 개념 이해, 유형 반복, 오답 분석 순서가 중요합니다. 수학 내신은 학교별 변형 문제가 많기 때문에 교과서, 부교재, 프린트, 기출 흐름을 함께 보는 수업이 필요합니다.</p>
+
+        <h2>학년별 학습 방향</h2>
+        <p><a href="강원초등과외/index.html">강원초등과외</a>는 공부 습관과 기초 개념을 만드는 시기입니다. <a href="강원중등과외/index.html">강원중등과외</a>는 내신 시험의 형식을 익히는 시기이며, <a href="강원고등과외/index.html">강원고등과외</a>는 내신과 수능을 함께 설계해야 하는 단계입니다.</p>
+    
+        </div>
+
+        <div class="province-section">
+            <h2>중학생 학습 전략</h2>
+            <p>강원 중학생은 학교별 내신 범위와 수행평가, 서술형 출제 비중을 함께 봐야 합니다. 영어는 본문 암기와 문법 적용을 분리해서 관리하고, 수학은 단원별 개념과 대표 유형을 먼저 안정화한 뒤 오답을 반복 추적하는 방식이 좋습니다.</p>
+            <p>중학교 시기에는 시험 직전 벼락치기보다 평소 복습 루틴이 중요합니다. 각 구 페이지에서 학교와 생활권을 좁힌 뒤 학생의 현재 수준에 맞는 과목별 페이지로 이동하면 더 구체적인 학습 방향을 잡기 쉽습니다.</p>
+        </div>
+
+        <div class="province-section">
+            <h2>고등학생 학습 전략</h2>
+            <p>강원 고등학생은 내신, 모의고사, 수능, 수행평가를 분리해서 관리해야 합니다. 학교별 시험 난도와 부교재 활용 방식이 다르기 때문에 단순 문제 풀이보다 시험 범위 분석, 서술형 감점 포인트, 모의고사 약점 보완이 함께 필요합니다.</p>
+            <p>상위권 학생은 실수와 시간 관리가 중요하고, 중위권 학생은 개념과 유형 연결이 중요합니다. 기초가 약한 학생은 선행보다 현재 단원의 필수 개념과 이전 학년의 빈틈을 함께 보완해야 학습 효과가 오래 유지됩니다.</p>
+        </div>
+
+        <div class="province-section">
+            <h2>강원 주요 시군구 과외</h2>
+            <p>아래 카드를 선택하면 강원 세부 지역 과외 페이지로 이동합니다. 지역 페이지에서 다시 동별, 과목별, 학년별, 학교별 페이지로 좁혀볼 수 있습니다.</p>
+            <div class="sample-link-row"><a class="sample-nav-link" href="강릉시과외/index.html">강릉시과외</a><a class="sample-nav-link" href="동해시과외/index.html">동해시과외</a><a class="sample-nav-link" href="삼척시과외/index.html">삼척시과외</a><a class="sample-nav-link" href="속초시과외/index.html">속초시과외</a><a class="sample-nav-link" href="양구군과외/index.html">양구군과외</a><a class="sample-nav-link" href="영월군과외/index.html">영월군과외</a><a class="sample-nav-link" href="원주시과외/index.html">원주시과외</a><a class="sample-nav-link" href="정선군과외/index.html">정선군과외</a><a class="sample-nav-link" href="춘천시과외/index.html">춘천시과외</a><a class="sample-nav-link" href="태백시과외/index.html">태백시과외</a><a class="sample-nav-link" href="평창군과외/index.html">평창군과외</a><a class="sample-nav-link" href="화천군과외/index.html">화천군과외</a><a class="sample-nav-link" href="횡성군과외/index.html">횡성군과외</a></div>
+        </div>
+
+        <div class="province-section">
+            <h2>FAQ</h2>
+            <h3>강원과외는 어느 지역부터 확인하는 것이 좋나요?</h3>
+            <p>학생이 거주하거나 학교를 다니는 세부 지역 페이지를 먼저 확인하는 것이 좋습니다. 이후 동, 과목, 학년, 학교 기준으로 좁히면 필요한 정보를 빠르게 찾을 수 있습니다.</p>
+            <h3>강원영어과외와 강원수학과외는 어디에서 볼 수 있나요?</h3>
+            <p>상단 주요 링크에서 강원영어과외와 강원수학과외로 바로 이동할 수 있습니다. 과목이 정해져 있다면 과목 페이지를 먼저 확인하는 흐름도 좋습니다.</p>
+            <h3>중학생과 고등학생은 과외 기준이 다른가요?</h3>
+            <p>다릅니다. 중학생은 내신 적응과 기초 정리가 중요하고, 고등학생은 학교별 내신과 모의고사, 수능형 학습을 함께 관리해야 합니다.</p>
+            <h3>강원 주요 시군구 과외 페이지는 어떤 역할인가요?</h3>
+            <p>세부 지역 페이지는 생활권 기준의 출발점입니다. 지역 페이지에서 동, 학교, 과목, 학년 페이지로 이어지도록 구성되어 있습니다.</p>
+            <h3>세부 지역 정보는 어디서 확인할 수 있나요?</h3>
+            <p>강원 세부 지역 정보는 이 페이지의 강원 주요 시군구 과외 영역에서 확인할 수 있습니다. 먼저 시군구 또는 주요 지역 페이지로 이동한 뒤, 동별·과목별·학년별·학교별 페이지로 좁혀보면 필요한 정보를 더 빠르게 찾을 수 있습니다.</p>
+        </div>
+    </section>
+
+    
+
+    
+
+    <section class="siblings">
+        <h2>함께 보는 과외</h2>
+        <ul><li><a href="강원영어과외/index.html">강원영어과외</a></li><li><a href="강원수학과외/index.html">강원수학과외</a></li><li><a href="강원초등과외/index.html">강원초등과외</a></li><li><a href="강원중등과외/index.html">강원중등과외</a></li><li><a href="강원고등과외/index.html">강원고등과외</a></li><li><a href="../고등학교과외/index.html">강원고등학교과외</a></li><li><a href="../중학교과외/index.html">강원중학교과외</a></li></ul>
+    </section>
+
+    <footer>
+        
+    </footer>
+</div>
+</body>
 </html>
