@@ -1,230 +1,459 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://studynavi.co.kr/">
-    <title>전국과외</title>
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
-            margin: 0;
-            color: #152033;
-            background:
-                linear-gradient(180deg, #071b37 0, #0b2345 360px, #f3efe6 360px, #f7f3ec 100%);
-        }
-        .page { max-width: 1100px; margin: 0 auto; padding: 28px 22px 44px; }
-        .hero {
-            overflow: hidden;
-            border: 1px solid rgba(217, 177, 96, 0.45);
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 24px 70px rgba(7, 27, 55, 0.25);
-        }
-        .platform-copy {
-            padding: 34px 36px 28px;
-            background:
-                linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 248, 235, 0.96) 100%);
-            border-bottom: 1px solid #e4d6bd;
-        }
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            min-height: 34px;
-            margin: 0 0 14px;
-            padding: 7px 13px;
-            border-radius: 999px;
-            background: #08234a;
-            color: #f6d58b;
-            font-size: 0.92rem;
-            font-weight: 800;
-        }
-        .hero-image {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 62%;
-            margin: 0;
-            background: #fff;
-        }
-        .hero-image-frame {
-            width: min(84%, 860px);
-            height: clamp(230px, 35vw, 390px);
-            margin: 22px auto 0;
-            overflow: hidden;
-            border: 1px solid #e4d6bd;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 12px 28px rgba(7, 27, 55, 0.12);
-        }
-        .intro-panel {
-            background: #ffffff;
-            border: 1px solid #e4d6bd;
-            border-top: 0;
-            padding: 24px 34px 26px;
-            border-radius: 0 0 8px 8px;
-        }
-        h1 {
-            margin: 0 0 14px;
-            font-size: clamp(2.8rem, 8vw, 5.8rem);
-            color: #061b36;
-            line-height: 0.98;
-            letter-spacing: 0;
-            font-weight: 900;
-            text-wrap: balance;
-        }
-        .hero-subcopy {
-            max-width: 780px;
-            margin: 0;
-            color: #26364d;
-            font-size: clamp(1.05rem, 2.2vw, 1.34rem);
-            line-height: 1.72;
-            font-weight: 650;
-            text-wrap: balance;
-        }
-        h2 { margin: 0 0 16px; font-size: 1.45rem; color: #061b36; }
-        p { line-height: 1.85; margin: 0 0 16px; color: #3d4655; }
-        .quick-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-        .quick-actions a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 44px;
-            padding: 12px 18px;
-            border-radius: 6px;
-            background: #09274f;
-            color: #fff;
-            font-weight: 800;
-            text-decoration: none;
-            box-shadow: 0 8px 18px rgba(9, 39, 79, 0.18);
-        }
-        .quick-actions a:nth-child(2) { background: #b9862f; color: #101010; }
-        .quick-actions a:nth-child(3) { background: #0b5f69; }
-        .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
-        section {
-            margin: 0;
-            padding: 24px;
-            border: 1px solid #e1d3ba;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.94);
-            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
-        }
-        section.featured {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
-        }
-        .link-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-        .nav-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 40px;
-            padding: 9px 15px;
-            border: 1px solid #c9b58d;
-            border-radius: 6px;
-            background: #fffdf8;
-            color: #073463;
-            text-decoration: none;
-            font-weight: 800;
-            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
-            white-space: nowrap;
-        }
-        .nav-link:hover {
-            background: #08234a;
-            border-color: #08234a;
-            color: #f8d996;
-            transform: translateY(-1px);
-            box-shadow: 0 8px 18px rgba(8, 35, 74, 0.18);
-        }
-        .link-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-        .link-card {
-            display: grid;
-            gap: 12px;
-            background: #fbf6ec;
-            border: 1px solid #e1d3ba;
-            padding: 18px;
-            border-radius: 8px;
-        }
-        .link-card strong { display: block; color: #061b36; font-size: 1.05rem; }
-        @media (max-width: 760px) {
-            .page { padding: 14px 12px 28px; }
-            .platform-copy { padding: 24px 18px 20px; }
-            .hero-image-frame { width: calc(100% - 28px); height: 260px; margin-top: 18px; }
-            .intro-panel { padding: 22px 18px; }
-            h1 { font-size: clamp(2.55rem, 14vw, 4.1rem); }
-            .hero-subcopy { font-size: 1.04rem; line-height: 1.68; }
-            .section-grid { grid-template-columns: 1fr; }
-            section { padding: 20px 16px; }
-            .nav-link { padding: 9px 13px; font-size: 0.95rem; }
-        }
-    </style>
-</head>
-<body>
-<div class="page">
-    <header class="hero">
-        <div class="platform-copy">
-            <p class="eyebrow">전국 지역별 맞춤 과외 안내</p>
-            <h1>학습나침반</h1>
-            <p class="hero-subcopy">전국과외 · 영어과외 · 수학과외 · 학교별과외 정보를 한 곳에서 찾을 수 있는 학습 정보 허브</p>
-            <p>전국과외는 전국 지역별 과외 정보를 중심으로 과목별, 학년별, 학교별 과외 페이지를 한곳에서 찾아볼 수 있도록 정리한 교육 정보 안내 페이지입니다. 방문자는 서울과외, 경기과외, 부산과외처럼 시도별 페이지로 이동하거나, 영어과외와 수학과외처럼 과목 기준으로 필요한 정보를 확인할 수 있습니다. 초등과외, 중등과외, 고등과외 페이지는 학습 단계별 탐색을 돕고, 고등학교과외와 중학교과외 페이지는 학교명을 기준으로 관련 지역 페이지까지 이어지도록 구성되어 있습니다. 또한 수요가 높은 시군구 과외 링크를 함께 배치해 지역별 학습 환경, 학교 주변 과외 수요, 과목별 학습 방향을 빠르게 비교할 수 있습니다. 메인 페이지는 광고성 문구보다 정보 탐색과 내부 이동 흐름을 우선으로 하며, 네이버 검색과 실제 방문자 모두가 사이트 구조를 쉽게 이해하도록 설계했습니다.</p>
-            <div class="quick-actions">
-                <a href="서울과외/index.html">서울과외 바로가기</a>
-                <a href="영어과외/index.html">영어과외 보기</a>
-                <a href="수학과외/index.html">수학과외 보기</a>
-            </div>
-        </div>
-        <div class="hero-image-frame">
-            <img class="hero-image" src="images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2008_07_18.png" alt="학생들이 함께 공부하는 전국과외 안내 이미지">
-        </div>
-        <div class="intro-panel">
-            <p>지역, 과목, 학년, 학교 기준으로 원하는 과외 페이지를 빠르게 찾을 수 있도록 주요 탐색 경로를 정리했습니다.</p>
-        </div>
-    </header>
-    <main class="section-grid">
-        <section class="featured">
-            <h2>지역별 과외</h2>
-            <div class="link-row"><a class="nav-link" href="서울과외/index.html">서울과외</a><a class="nav-link" href="경기과외/index.html">경기과외</a><a class="nav-link" href="인천과외/index.html">인천과외</a><a class="nav-link" href="부산과외/index.html">부산과외</a><a class="nav-link" href="대구과외/index.html">대구과외</a><a class="nav-link" href="대전과외/index.html">대전과외</a><a class="nav-link" href="광주과외/index.html">광주과외</a><a class="nav-link" href="울산과외/index.html">울산과외</a><a class="nav-link" href="세종과외/index.html">세종과외</a><a class="nav-link" href="강원과외/index.html">강원과외</a><a class="nav-link" href="충북과외/index.html">충북과외</a><a class="nav-link" href="충남과외/index.html">충남과외</a><a class="nav-link" href="전북과외/index.html">전북과외</a><a class="nav-link" href="전남과외/index.html">전남과외</a><a class="nav-link" href="경북과외/index.html">경북과외</a><a class="nav-link" href="경남과외/index.html">경남과외</a><a class="nav-link" href="제주과외/index.html">제주과외</a></div>
-        </section>
-        <section>
-            <h2>과목별 과외</h2>
-            <div class="link-row"><a class="nav-link" href="영어과외/index.html">영어과외</a><a class="nav-link" href="수학과외/index.html">수학과외</a></div>
-        </section>
-        <section>
-            <h2>학년별 과외</h2>
-            <div class="link-row"><a class="nav-link" href="초등과외/index.html">초등과외</a><a class="nav-link" href="중등과외/index.html">중등과외</a><a class="nav-link" href="고등과외/index.html">고등과외</a></div>
-        </section>
-        <section>
-            <h2>학교별 과외</h2>
-            <div class="link-row"><a class="nav-link" href="고등학교과외/index.html">고등학교과외</a><a class="nav-link" href="중학교과외/index.html">중학교과외</a></div>
-        </section>
-        <section>
-            <h2>인기 시군구 과외</h2>
-            <div class="link-row"><a class="nav-link" href="경남과외/창원시과외/index.html">창원시과외</a><a class="nav-link" href="경기과외/수원시과외/index.html">수원시과외</a><a class="nav-link" href="경기과외/고양시과외/index.html">고양시과외</a><a class="nav-link" href="경기과외/성남시과외/index.html">성남시과외</a><a class="nav-link" href="경기과외/용인시과외/index.html">용인시과외</a><a class="nav-link" href="충북과외/청주시과외/index.html">청주시과외</a><a class="nav-link" href="대전과외/유성구과외/index.html">유성구과외</a><a class="nav-link" href="경기과외/화성시과외/index.html">화성시과외</a><a class="nav-link" href="경남과외/김해시과외/index.html">김해시과외</a><a class="nav-link" href="경북과외/구미시과외/index.html">구미시과외</a></div>
-        </section>
-        <section class="featured">
-        <h2>하단 빠른 링크</h2>
-        <div class="link-cards">
-            <div class="link-card">
-                <strong>대표 지역</strong>
-                <div class="link-row"><a class="nav-link" href="서울과외/index.html">서울과외</a><a class="nav-link" href="경기과외/index.html">경기과외</a><a class="nav-link" href="부산과외/index.html">부산과외</a></div>
-            </div>
-            <div class="link-card">
-                <strong>과목별 링크</strong>
-                <div class="link-row"><a class="nav-link" href="영어과외/index.html">영어과외</a><a class="nav-link" href="수학과외/index.html">수학과외</a></div>
-            </div>
-            <div class="link-card">
-                <strong>학년별 링크</strong>
-                <div class="link-row"><a class="nav-link" href="초등과외/index.html">초등과외</a><a class="nav-link" href="중등과외/index.html">중등과외</a><a class="nav-link" href="고등과외/index.html">고등과외</a></div>
-            </div>
-            <div class="link-card">
-                <strong>학교별 링크</strong>
-                <div class="link-row"><a class="nav-link" href="고등학교과외/index.html">고등학교과외</a><a class="nav-link" href="중학교과외/index.html">중학교과외</a></div>
-            </div>
-        </div>
-        </section>
-    </main>
-</div>
-</body>
+<!DOCTYPE html>
+
+<html lang="ko">
+ 
+<head>
+<meta name="naver-site-verification" content="2cbbde17b132ae698d41f253cb83ff227643c208" />
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="https://studynavi.co.kr/">
+
+    <title>전국과외</title>
+
+    <style>
+
+        * { box-sizing: border-box; }
+
+        body {
+
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+
+            margin: 0;
+
+            color: #152033;
+
+            background:
+
+                linear-gradient(180deg, #071b37 0, #0b2345 360px, #f3efe6 360px, #f7f3ec 100%);
+
+        }
+
+        .page { max-width: 1100px; margin: 0 auto; padding: 28px 22px 44px; }
+
+        .hero {
+
+            overflow: hidden;
+
+            border: 1px solid rgba(217, 177, 96, 0.45);
+
+            border-radius: 8px;
+
+            background: #fff;
+
+            box-shadow: 0 24px 70px rgba(7, 27, 55, 0.25);
+
+        }
+
+        .platform-copy {
+
+            padding: 34px 36px 28px;
+
+            background:
+
+                linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 248, 235, 0.96) 100%);
+
+            border-bottom: 1px solid #e4d6bd;
+
+        }
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            min-height: 34px;
+
+            margin: 0 0 14px;
+
+            padding: 7px 13px;
+
+            border-radius: 999px;
+
+            background: #08234a;
+
+            color: #f6d58b;
+
+            font-size: 0.92rem;
+
+            font-weight: 800;
+
+        }
+
+        .hero-image {
+
+            display: block;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center 62%;
+
+            margin: 0;
+
+            background: #fff;
+
+        }
+
+        .hero-image-frame {
+
+            width: min(84%, 860px);
+
+            height: clamp(230px, 35vw, 390px);
+
+            margin: 22px auto 0;
+
+            overflow: hidden;
+
+            border: 1px solid #e4d6bd;
+
+            border-radius: 8px;
+
+            background: #fff;
+
+            box-shadow: 0 12px 28px rgba(7, 27, 55, 0.12);
+
+        }
+
+        .intro-panel {
+
+            background: #ffffff;
+
+            border: 1px solid #e4d6bd;
+
+            border-top: 0;
+
+            padding: 24px 34px 26px;
+
+            border-radius: 0 0 8px 8px;
+
+        }
+
+        h1 {
+
+            margin: 0 0 14px;
+
+            font-size: clamp(2.8rem, 8vw, 5.8rem);
+
+            color: #061b36;
+
+            line-height: 0.98;
+
+            letter-spacing: 0;
+
+            font-weight: 900;
+
+            text-wrap: balance;
+
+        }
+
+        .hero-subcopy {
+
+            max-width: 780px;
+
+            margin: 0;
+
+            color: #26364d;
+
+            font-size: clamp(1.05rem, 2.2vw, 1.34rem);
+
+            line-height: 1.72;
+
+            font-weight: 650;
+
+            text-wrap: balance;
+
+        }
+
+        h2 { margin: 0 0 16px; font-size: 1.45rem; color: #061b36; }
+
+        p { line-height: 1.85; margin: 0 0 16px; color: #3d4655; }
+
+        .quick-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
+        .quick-actions a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 44px;
+
+            padding: 12px 18px;
+
+            border-radius: 6px;
+
+            background: #09274f;
+
+            color: #fff;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+            box-shadow: 0 8px 18px rgba(9, 39, 79, 0.18);
+
+        }
+
+        .quick-actions a:nth-child(2) { background: #b9862f; color: #101010; }
+
+        .quick-actions a:nth-child(3) { background: #0b5f69; }
+
+        .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+
+        section {
+
+            margin: 0;
+
+            padding: 24px;
+
+            border: 1px solid #e1d3ba;
+
+            border-radius: 8px;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            box-shadow: 0 14px 34px rgba(47, 37, 20, 0.08);
+
+        }
+
+        section.featured {
+
+            grid-column: 1 / -1;
+
+            background: linear-gradient(135deg, #ffffff 0%, #fff8ea 100%);
+
+        }
+
+        .link-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+        .nav-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 40px;
+
+            padding: 9px 15px;
+
+            border: 1px solid #c9b58d;
+
+            border-radius: 6px;
+
+            background: #fffdf8;
+
+            color: #073463;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+
+            white-space: nowrap;
+
+        }
+
+        .nav-link:hover {
+
+            background: #08234a;
+
+            border-color: #08234a;
+
+            color: #f8d996;
+
+            transform: translateY(-1px);
+
+            box-shadow: 0 8px 18px rgba(8, 35, 74, 0.18);
+
+        }
+
+        .link-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+
+        .link-card {
+
+            display: grid;
+
+            gap: 12px;
+
+            background: #fbf6ec;
+
+            border: 1px solid #e1d3ba;
+
+            padding: 18px;
+
+            border-radius: 8px;
+
+        }
+
+        .link-card strong { display: block; color: #061b36; font-size: 1.05rem; }
+
+        @media (max-width: 760px) {
+
+            .page { padding: 14px 12px 28px; }
+
+            .platform-copy { padding: 24px 18px 20px; }
+
+            .hero-image-frame { width: calc(100% - 28px); height: 260px; margin-top: 18px; }
+
+            .intro-panel { padding: 22px 18px; }
+
+            h1 { font-size: clamp(2.55rem, 14vw, 4.1rem); }
+
+            .hero-subcopy { font-size: 1.04rem; line-height: 1.68; }
+
+            .section-grid { grid-template-columns: 1fr; }
+
+            section { padding: 20px 16px; }
+
+            .nav-link { padding: 9px 13px; font-size: 0.95rem; }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <header class="hero">
+
+        <div class="platform-copy">
+
+            <p class="eyebrow">전국 지역별 맞춤 과외 안내</p>
+
+            <h1>학습나침반</h1>
+
+            <p class="hero-subcopy">전국과외 · 영어과외 · 수학과외 · 학교별과외 정보를 한 곳에서 찾을 수 있는 학습 정보 허브</p>
+
+            <p>전국과외는 전국 지역별 과외 정보를 중심으로 과목별, 학년별, 학교별 과외 페이지를 한곳에서 찾아볼 수 있도록 정리한 교육 정보 안내 페이지입니다. 방문자는 서울과외, 경기과외, 부산과외처럼 시도별 페이지로 이동하거나, 영어과외와 수학과외처럼 과목 기준으로 필요한 정보를 확인할 수 있습니다. 초등과외, 중등과외, 고등과외 페이지는 학습 단계별 탐색을 돕고, 고등학교과외와 중학교과외 페이지는 학교명을 기준으로 관련 지역 페이지까지 이어지도록 구성되어 있습니다. 또한 수요가 높은 시군구 과외 링크를 함께 배치해 지역별 학습 환경, 학교 주변 과외 수요, 과목별 학습 방향을 빠르게 비교할 수 있습니다. 메인 페이지는 광고성 문구보다 정보 탐색과 내부 이동 흐름을 우선으로 하며, 네이버 검색과 실제 방문자 모두가 사이트 구조를 쉽게 이해하도록 설계했습니다.</p>
+
+            <div class="quick-actions">
+
+                <a href="서울과외/index.html">서울과외 바로가기</a>
+
+                <a href="영어과외/index.html">영어과외 보기</a>
+
+                <a href="수학과외/index.html">수학과외 보기</a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image-frame">
+
+            <img class="hero-image" src="images/thumbs/ChatGPT%20Image%202026%EB%85%84%206%EC%9B%94%205%EC%9D%BC%20%EC%98%A4%ED%9B%84%2008_07_18.png" alt="학생들이 함께 공부하는 전국과외 안내 이미지">
+
+        </div>
+
+        <div class="intro-panel">
+
+            <p>지역, 과목, 학년, 학교 기준으로 원하는 과외 페이지를 빠르게 찾을 수 있도록 주요 탐색 경로를 정리했습니다.</p>
+
+        </div>
+
+    </header>
+
+    <main class="section-grid">
+
+        <section class="featured">
+
+            <h2>지역별 과외</h2>
+
+            <div class="link-row"><a class="nav-link" href="서울과외/index.html">서울과외</a><a class="nav-link" href="경기과외/index.html">경기과외</a><a class="nav-link" href="인천과외/index.html">인천과외</a><a class="nav-link" href="부산과외/index.html">부산과외</a><a class="nav-link" href="대구과외/index.html">대구과외</a><a class="nav-link" href="대전과외/index.html">대전과외</a><a class="nav-link" href="광주과외/index.html">광주과외</a><a class="nav-link" href="울산과외/index.html">울산과외</a><a class="nav-link" href="세종과외/index.html">세종과외</a><a class="nav-link" href="강원과외/index.html">강원과외</a><a class="nav-link" href="충북과외/index.html">충북과외</a><a class="nav-link" href="충남과외/index.html">충남과외</a><a class="nav-link" href="전북과외/index.html">전북과외</a><a class="nav-link" href="전남과외/index.html">전남과외</a><a class="nav-link" href="경북과외/index.html">경북과외</a><a class="nav-link" href="경남과외/index.html">경남과외</a><a class="nav-link" href="제주과외/index.html">제주과외</a></div>
+
+        </section>
+
+        <section>
+
+            <h2>과목별 과외</h2>
+
+            <div class="link-row"><a class="nav-link" href="영어과외/index.html">영어과외</a><a class="nav-link" href="수학과외/index.html">수학과외</a></div>
+
+        </section>
+
+        <section>
+
+            <h2>학년별 과외</h2>
+
+            <div class="link-row"><a class="nav-link" href="초등과외/index.html">초등과외</a><a class="nav-link" href="중등과외/index.html">중등과외</a><a class="nav-link" href="고등과외/index.html">고등과외</a></div>
+
+        </section>
+
+        <section>
+
+            <h2>학교별 과외</h2>
+
+            <div class="link-row"><a class="nav-link" href="고등학교과외/index.html">고등학교과외</a><a class="nav-link" href="중학교과외/index.html">중학교과외</a></div>
+
+        </section>
+
+        <section>
+
+            <h2>인기 시군구 과외</h2>
+
+            <div class="link-row"><a class="nav-link" href="경남과외/창원시과외/index.html">창원시과외</a><a class="nav-link" href="경기과외/수원시과외/index.html">수원시과외</a><a class="nav-link" href="경기과외/고양시과외/index.html">고양시과외</a><a class="nav-link" href="경기과외/성남시과외/index.html">성남시과외</a><a class="nav-link" href="경기과외/용인시과외/index.html">용인시과외</a><a class="nav-link" href="충북과외/청주시과외/index.html">청주시과외</a><a class="nav-link" href="대전과외/유성구과외/index.html">유성구과외</a><a class="nav-link" href="경기과외/화성시과외/index.html">화성시과외</a><a class="nav-link" href="경남과외/김해시과외/index.html">김해시과외</a><a class="nav-link" href="경북과외/구미시과외/index.html">구미시과외</a></div>
+
+        </section>
+
+        <section class="featured">
+
+        <h2>하단 빠른 링크</h2>
+
+        <div class="link-cards">
+
+            <div class="link-card">
+
+                <strong>대표 지역</strong>
+
+                <div class="link-row"><a class="nav-link" href="서울과외/index.html">서울과외</a><a class="nav-link" href="경기과외/index.html">경기과외</a><a class="nav-link" href="부산과외/index.html">부산과외</a></div>
+
+            </div>
+
+            <div class="link-card">
+
+                <strong>과목별 링크</strong>
+
+                <div class="link-row"><a class="nav-link" href="영어과외/index.html">영어과외</a><a class="nav-link" href="수학과외/index.html">수학과외</a></div>
+
+            </div>
+
+            <div class="link-card">
+
+                <strong>학년별 링크</strong>
+
+                <div class="link-row"><a class="nav-link" href="초등과외/index.html">초등과외</a><a class="nav-link" href="중등과외/index.html">중등과외</a><a class="nav-link" href="고등과외/index.html">고등과외</a></div>
+
+            </div>
+
+            <div class="link-card">
+
+                <strong>학교별 링크</strong>
+
+                <div class="link-row"><a class="nav-link" href="고등학교과외/index.html">고등학교과외</a><a class="nav-link" href="중학교과외/index.html">중학교과외</a></div>
+
+            </div>
+
+        </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
 </html>
